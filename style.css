@@ -1,0 +1,30 @@
+body{
+    height: 100%;
+    background-color: #e9ecef;
+}
+/* the style for the top nav bar */
+.menu{
+    background-color: black;
+    position: fixed;
+}
+.menulist{
+    list-style-type: none;
+}
+.menulist li{
+    display: inline-block;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 30px;
+    padding-left: 30px;
+    padding-top: 0px;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+/* the header css */
+.header{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+}
