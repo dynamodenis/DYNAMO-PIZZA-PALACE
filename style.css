@@ -130,6 +130,12 @@ footer{
 .topList{
     color: red;
 }
+.crust{
+    color: green;
+}
+.p2{
+    color: green;
+}
 
 /* THIS DESIGNS THE ABOUT US */
 .about{
@@ -139,4 +145,29 @@ footer{
 /* THIS CODE DESIGNS THE ORDER FORM */
 .orderForm{
     margin-top: 100px;
+}
+.orderSpace{
+    padding-top: 30px;
+}
+.totalOrder{
+    padding-top: 1.5em;
+}
+.totalOrder h4{
+    background-color:green;
+    height: 1.5em;
+    font-weight: bolder;
+
+}
+.contactDetails {
+    text-align: center;
+
+}
+.footer{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+#submit{
+    width: 100%;
+    background-color: red;
+    border-radius: 40px;
 }
