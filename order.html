@@ -26,11 +26,12 @@
                 <div class="col-md-4">
                     <form action="">
                         <select name="pizza" class="pizzaType" style="width: 300px;">
-                            <option value="chickenMushroom">Chicken Mushroom Pizza - Ksh.1300</option>
-                            <option value="chickenTikka">Chicken Tikka Pizza - Ksh.1100</option>
-                            <option value="vegTikka ">Vegeterian Tikka Pizza - Ksh.1150</option>
-                            <option value="beefPepperoni">Beef Pepperoni Pizza - Ksh.1300</option>
-                            <option value="italian">Italian Pizza - Ksh.1400</option>
+                            <option  value=1300 class="chickenMushroom" onclick="chickenMushroom()">Chicken Mushroom Pizza - Ksh.1300</option>
+                            <option value=1250 onclick='hawaiian()'>Hawaiian Pizza - Ksh.1250</option>
+                            <option value=1100>Chicken Tikka Pizza - Ksh.1100</option>
+                            <option value=1150>Vegeterian Tikka Pizza - Ksh.1150</option>
+                            <option value=1300>Beef Pepperoni Pizza - Ksh.1300</option>
+                            <option value=1400>Italian Pizza - Ksh.1400</option>
                         </select>
                     </form>
                 </div>
@@ -45,9 +46,9 @@
                 <div class="col-md-4">
                     <form action="">
                         <select name="size" class="pizzaSize" style="width: 300px;">
-                            <option value="large" class="large">Large</option>
-                            <option value="medium" class="medium">Medium</option>
-                            <option value="small" class="small">Small</option>
+                            <option value=1300 class="large">Large</option>
+                            <option value=800 class="medium">Medium</option>
+                            <option value=550 class="small">Small</option>
                         </select>
 
                     </form>
@@ -63,10 +64,10 @@
                 <div class="col-md-4">
                     <form action="">
                         <select name="toppings" class="pizzaToppings" style="width: 300px;">
-                            <option value="mushroom" class="mushroom">Mushroom</option>
-                            <option value="bacon" class="bacon">Bacon</option>
-                            <option value="sausage" class="bacon">Sausage</option>
-                            <option value="cheese" class="chese">Cheese</option>
+                            <option value="100" class="mushroom">Mushroom</option>
+                            <option value="100" class="bacon">Bacon</option>
+                            <option value="100" class="bacon">Sausage</option>
+                            <option value="100" class="chese">Cheese</option>
                         </select>
 
                     </form>
@@ -82,10 +83,10 @@
                 <div class="col-md-4">
                     <form action="">
                         <select name="crust" class="pizzaCrust" style="width: 300px;">
-                            <option value="stuffed" class="stuffed">Stuffed Crust</option>
-                            <option value="thinCrispy" class="thinCrispy">Thin Crispy Crust</option>
-                            <option value="neopolitan" class="neopolitan">Neopolitan Crust</option>
-                            <option value="gluteen" class="gluteen">Gluteen Free Crust</option>
+                            <option value=50 class="stuffed">Stuffed Crust</option>
+                            <option value=100 class="thinCrispy">Thin Crispy Crust</option>
+                            <option value=150 class="neopolitan">Neopolitan Crust</option>
+                            <option value=100 class="gluteen">Gluteen Free Crust</option>
                         </select>
                     </form>
                 </div>
@@ -127,5 +128,7 @@
             </footer>
         </div> 
     </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
