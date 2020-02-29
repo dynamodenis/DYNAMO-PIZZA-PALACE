@@ -1,15 +1,19 @@
 // BACK END
 // This is the order constructor that will take persons order
-function Order(type,size,crust,toppings){
+
+function Order(type,size,crust,toppings,total){
     this.pizzaType=type;
     this.pizzaSize=size;
     this.pizzaCrust=crust;
     this.pizzaToppings=toppings;
+    this.total=total;
 }
 var pizza; var size; var toppings; var crust;
 var large;
 var medium;
 var small;
+var total=0;
+var totalOrder=0;
 // Create  a function for everypizza
 function chickenMushroom(){
     large=1300;
@@ -28,23 +32,16 @@ function hawaiian(){
 // FRONT END
 $(document).ready(function(){
     // // This recieves the data value of the type of pizza;
-    $('.pizzaType').change(function(){
-        var pizza=parseInt($(this).val());
-        $(".pizzaPrice").html(pizza);
-        console.log(pizza);
-     });
-    //  This receives the size of the pizza
-    $(".pizzaSize").change(function(){
-        var size=parseInt($(this).val());
-        console.log(size);
-    });
-    //This receives the toppings
-    $(".pizzaToppings").change(function(){
-        var toppings=parseInt($(this).val());
-        console.log(toppings);
-    });
-    $(".pizzaCrust").change(function(){
-        var crust=parseInt($(this).val());
-        console.log(crust);
+    $('.confirmOrder').click(function(event){
+        event.preventDefault();
+      var pizza=parseInt($('.pizzaType option:selected').val());
+      var size=parseInt($('.pizzaSize option:selected').val());
+      var toppings=parseInt($('.pizzaToppings option:selected').val());
+      var crust=parseInt($('.pizzaCrust option:selected').val());
+      
+      total= size+toppings+crust;
+      console.log(total);
+
+      
     })
 });

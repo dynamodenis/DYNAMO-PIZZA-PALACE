@@ -171,3 +171,11 @@ footer{
     background-color: red;
     border-radius: 40px;
 }
+.orderbtn{
+    text-align: center;
+    padding-top: 30px;
+}
+.orderbtn button{
+    background-color: red;
+    border-radius: 40px;
+}
