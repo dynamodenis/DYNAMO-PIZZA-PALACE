@@ -41,7 +41,15 @@ $(document).ready(function(){
       
       total= size+toppings+crust;
       console.log(total);
+        // after confirming order the values will hold no data untill you input
+      $('.pizzaType').val("");
+      $('.pizzaSize').val("");
+      $(".pizzaToppings").val("");
+      $('.pizzaCrust').val("");
 
       
-    })
+    
+    //   append the total amount to the div
+    $('.total').append(total);
+    });
 });
