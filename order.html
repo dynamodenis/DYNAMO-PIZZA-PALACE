@@ -26,17 +26,17 @@
                 <div class="col-md-4">
                     <form action="">
                         <select name="pizza" class="pizzaType" style="width: 300px;">
-                            <option  value="1300">Chicken Mushroom Pizza - Ksh.1300</option>
-                            <option value="1250">Hawaiian Pizza - Ksh.1250</option>
-                            <option value="1100">Chicken Tikka Pizza - Ksh.1100</option>
-                            <option value="1150">Vegeterian Tikka Pizza - Ksh.1150</option>
-                            <option value="1300">Beef Pepperoni Pizza - Ksh.1300</option>
-                            <option value="1400">Italian Pizza - Ksh.1400</option>
+                            <option  value="Chicken Mushroom">Chicken Mushroom Pizza - Ksh.1300</option>
+                            <option value="Hawaiian">Hawaiian Pizza - Ksh.1250</option>
+                            <option value="Chicken Tikka">Chicken Tikka Pizza - Ksh.1100</option>
+                            <option value="Vegeterian Tikka">Vegeterian Tikka Pizza - Ksh.1150</option>
+                            <option value="Pepperoni">Beef Pepperoni Pizza - Ksh.1300</option>
+                            <option value="Italian">Italian Pizza - Ksh.1400</option>
                         </select>
                     </form>
                 </div>
                 <div class="col-md-4 ">
-                    <input type="text"  placeholder="Amount..."></div>
+                   <p class="pName border border-danger rounded-lg"></p>
                 </div>
             </div>
             <div class="row orderSpace">
@@ -54,7 +54,7 @@
                     </form>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" class="sizePrice" placeholder="Amount...">
+                   <p class="pSize border border-danger rounded-lg"></p> 
                 </div>
             </div>
             <div class="row orderSpace">
@@ -73,7 +73,7 @@
                     </form>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" class="toppingsPrice" placeholder="Amount...">
+                    <p class="pToppings border border-danger rounded-lg"></p>
                 </div>
             </div>
             <div class="row orderSpace">
@@ -91,7 +91,7 @@
                     </form>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" class="crustPrice" placeholder="Amount...">
+                    <p class="pCrust border border-danger rounded-lg"></p>
                 </div>
             </div>
             <div class="orderbtn">
@@ -101,6 +101,30 @@
         <div class="container">
             <div class="totalOrder">
                 <h4>Your Total Order</h4>
+                <div class="orderTable table table-striped table-condensed table-responsive table-hover">
+                    <table>
+                        <thead class="orderHead">
+                            <tr>
+                                <th class="tr">Order</th>
+                                <th class="tr">Name</th>
+                                <th class="tr">Size</th>
+                                <th class="tr">Toppings</th>
+                                <th class="tr">Crust</th>
+                                <th class="tr">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="orderBody">
+                            <tr>
+                                <td class="orderNumber"></td>
+                                <td class="orderName"></td>
+                                <td class="orderSize"></td>
+                                <td class="orderToppings"></td>
+                                <td class="orderCrust"></td>
+                                <td class="orderTotal"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="yourOrder"></div>
                 <label class="totalAmount" >Total Amount: <span class="total bg-warning" ></span></label>
             </div>
