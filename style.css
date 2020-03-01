@@ -179,3 +179,19 @@ footer{
     background-color: red;
     border-radius: 40px;
 }
+select{
+    border-radius: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.totalAmount{
+    font-weight: bolder;
+    background-color: yellowgreen;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 30px;
+}
+.total{
+    border-radius: 30px;
+    padding-right: 10px;
+}

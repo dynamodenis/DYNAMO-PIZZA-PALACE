@@ -31,9 +31,10 @@ function hawaiian(){
 // USER INTERFACE
 // FRONT END
 $(document).ready(function(){
-    // // This recieves the data value of the type of pizza;
     $('.confirmOrder').click(function(event){
-        event.preventDefault();
+        
+
+ // // This recieves the data value of the type of pizza;
       var pizza=parseInt($('.pizzaType option:selected').val());
       var size=parseInt($('.pizzaSize option:selected').val());
       var toppings=parseInt($('.pizzaToppings option:selected').val());
@@ -41,15 +42,21 @@ $(document).ready(function(){
       
       total= size+toppings+crust;
       console.log(total);
-        // after confirming order the values will hold no data untill you input
-      $('.pizzaType').val("");
-      $('.pizzaSize').val("");
-      $(".pizzaToppings").val("");
-      $('.pizzaCrust').val("");
 
-      
+       // after confirming order the values will hold no data untill you input
+       $('.pizzaType').val("");
+       $('.pizzaSize').val("");
+       $(".pizzaToppings").val("");
+       $('.pizzaCrust').val("");  
+        
+    //   Validating the pizza form
+    if(!pizza || !size || !toppings || !crust){
+        alert("Failed1! Please choose a pizza.")
+    }
     
     //   append the total amount to the div
     $('.total').append(total);
+    event.preventDefault();
     });
 });
+
