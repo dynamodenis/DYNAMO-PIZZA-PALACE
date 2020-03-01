@@ -14,18 +14,8 @@ var medium;
 var small;
 var total=0;
 var totalOrder=0;
-// Create  a function for everypizza
-function chickenMushroom(){
-    large=1300;
-    medium=900;
-    small=650;
-}
-function hawaiian(){
-    large=1250;
-    medium=800;
-    small=550;
-}
-// total prototype.
+
+// add an order prototype.
 
 
 // USER INTERFACE
@@ -83,14 +73,31 @@ $(document).ready(function(){
     });
 
     // Home delivery option
+    var user;
+    var number;
+    var location;
     $('.homeDelivery').click(function(){
         // User delivery infomation
         $('.contactForm').slideToggle(1000);
-        var user=$('.userName').val();
-        var number=$('.userNumber').val();
-        var location=$('.userLocation').val();
-
-        
+         user=$('.userName').val();
+         number=$('.userNumber').val();
+         location=$('.userLocation').val();
+         console.log(user,number,location)
     });
+
+    // Home Delivery Validation form
+    $('.confirmHomeDelivery').click(function(){
+         user=$('.userName').val();
+         number=$('.userNumber').val();
+         location=$('.userLocation').val();
+
+        if(!user && !number && !location){
+            alert("Home Delivery Filed! Please fill the form.")
+        }
+        else{
+            alert("Home Delivery Confirmed!");
+        }
+    });
+
 });
 
