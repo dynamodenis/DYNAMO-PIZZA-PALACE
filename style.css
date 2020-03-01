@@ -160,6 +160,7 @@ footer{
 }
 .contactDetails {
     text-align: center;
+    padding-top: 10px;
 
 }
 .footer{
@@ -219,4 +220,12 @@ select{
 .tr{
     padding-left: 30px;
     background-color: gray;
-}   
+}
+
+/* This hides the contact form */
+.contactForm{
+    display: none;
+}
+.confirmHomeDelivery{
+    padding-left: 20px;
+}

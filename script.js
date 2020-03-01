@@ -83,5 +83,14 @@ $(document).ready(function(){
     });
 
     // Home delivery option
+    $('.homeDelivery').click(function(){
+        // User delivery infomation
+        $('.contactForm').slideToggle(1000);
+        var user=$('.userName').val();
+        var number=$('.userNumber').val();
+        var location=$('.userLocation').val();
+
+        
+    });
 });
 
