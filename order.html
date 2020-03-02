@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css" type="text/css" media="all">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Pizza Order|| DYNAMO PALACE</title>
+</head>
+<body>
+    <div class="container-fluid menu">
+        <ul class="menulist">
+            <li><a href="index.html">HOME</a></li>
+            <li ><a href="menu.html">MENU</a></li>
+            <li ><a href="about.html">ABOUT US</a></li>
+            <li class="order"><a href="order.html">ORDER NOW</a></li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <div class="orderForm">
+            <div class="row orderSpace">
+                <div class="col-md-4">
+                    <label for="type">Type of Pizza</label>
+                </div>
+                <div class="col-md-4">
+                    <form action="">
+                        <select name="pizza" class="pizzaType" style="width: 300px;">
+                            <option  value="Chicken Mushroom">Chicken Mushroom Pizza - Ksh.1300</option>
+                            <option value="Hawaiian">Hawaiian Pizza - Ksh.1250</option>
+                            <option value="Chicken Tikka">Chicken Tikka Pizza - Ksh.1100</option>
+                            <option value="Vegeterian Tikka">Vegeterian Tikka Pizza - Ksh.1150</option>
+                            <option value="Pepperoni">Beef Pepperoni Pizza - Ksh.1300</option>
+                            <option value="Italian">Italian Pizza - Ksh.1400</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="col-md-4 ">
+                   <p class="pName border border-danger rounded-lg"></p>
+                </div>
+            </div>
+            <div class="row orderSpace">
+                <div class="col-md-4">
+                    <label for="type">Size of Pizza</label>
+                </div>
+                <div class="col-md-4">
+                    <form action="">
+                        <select name="size" class="pizzaSize" style="width: 300px;">
+                            <option value=1300 class="large">Large</option>
+                            <option value=800 class="medium">Medium</option>
+                            <option value=550 class="small">Small</option>
+                        </select>
+
+                    </form>
+                </div>
+                <div class="col-md-4">
+                   <p class="pSize border border-danger rounded-lg"></p> 
+                </div>
+            </div>
+            <div class="row orderSpace">
+                <div class="col-md-4">
+                    <label for="type">Type of Toppings</label>
+                </div>
+                <div class="col-md-4">
+                    <form action="">
+                        <select name="toppings" class="pizzaToppings" style="width: 300px;">
+                            <option value="100" class="mushroom">Mushroom</option>
+                            <option value="100" class="bacon">Bacon</option>
+                            <option value="100" class="bacon">Sausage</option>
+                            <option value="100" class="chese">Cheese</option>
+                        </select>
+
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <p class="pToppings border border-danger rounded-lg"></p>
+                </div>
+            </div>
+            <div class="row orderSpace">
+                <div class="col-md-4">
+                    <label for="type">Type of Crust</label>
+                </div>
+                <div class="col-md-4">
+                    <form action="">
+                        <select name="crust" class="pizzaCrust" style="width: 300px;">
+                            <option value=50 class="stuffed">Stuffed Crust</option>
+                            <option value=100 class="thinCrispy">Thin Crispy Crust</option>
+                            <option value=150 class="neopolitan">Neopolitan Crust</option>
+                            <option value=100 class="gluteen">Gluteen Free Crust</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <p class="pCrust border border-danger rounded-lg"></p>
+                </div>
+            </div>
+            <div class="orderbtn">
+                <button type="submit" class="confirmOrder">CONFIRM ORDER</button> <button class="addPizza"> ADD ANOTHER PIZZA</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="totalOrder">
+                <h4>Your Total Order</h4>
+                <div class="orderTable table table-striped table-condensed table-responsive table-hover">
+                    <table>
+                        <thead class="orderHead">
+                            <tr>
+                                <th class="tr">Order</th>
+                                <th class="tr">Name</th>
+                                <th class="tr">Size</th>
+                                <th class="tr">Toppings</th>
+                                <th class="tr">Crust</th>
+                                <th class="tr">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="orderBody">
+                            <tr>
+                                <td class="orderNumber"></td>
+                                <td class="orderName"></td>
+                                <td class="orderSize"></td>
+                                <td class="orderToppings"></td>
+                                <td class="orderCrust"></td>
+                                <td class="orderTotal"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="yourOrder"></div>
+                <label class="totalAmount" >Total Amount: <span class="total bg-warning" ></span></label>
+            </div>
+            <div class="delivery">
+                <p style="font-weight: bold; font-size: 1em;">We also do <span>home delivery</span> within Nairobi at Ksh.200. <button class="homeDelivery bg-danger rounded-lg">HOME DELIVERY</button><button class="confirmHomeDelivery bg-success rounded-lg">CONFIRM HOME DELIVERY</button></p>
+            </div>
+            <div class="contactForm">
+                    <form action="" class="contactDetails">
+                        <label for="name">Your Name:  </label>
+                        <input type="text" value="" class="userName" placeholder="Name.."><br>
+                        <label for="number">Phone Number:</label>
+                        <input type="text" value="" class="userNumber" placeholder="Number.."><br>
+                        <label for="location">Delivery Location</label>
+                        <input type="text" value="" class="userLocation" placeholder="Location.."><br>
+                    </form>
+            </div>
+            <div class="submit">
+                <input type="submit" name="" id="submit">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="footer">
+            <footer>
+                Tel: +254717371936. <br>
+                Email:pizza@dynamopalace.com. <br>
+                Location: Ngong Road,Prestige Plaza,2nd Floor. <br>
+                All Rights Reserved. <br>
+                &copy;2020. <br>
+            </footer>
+        </div> 
+    </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
