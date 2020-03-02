@@ -7,14 +7,22 @@ function Order(type,size,crust,toppings,total){
     this.pizzaCrust=crust;
     this.pizzaToppings=toppings;
     this.total=total;
+    this.address=[];
 }
+
+function Address(user,number,location){
+    this.user=user;
+    this.number=number;
+    this.location=location;
+}
+
 var pizza; var size; var toppings; var crust;
 var large;
 var medium;
 var small;
 var total=0;
 var totalOrder=0;
-
+var order;
 // add an order prototype.
 
 Order.prototype.addOrder=function(){
@@ -78,10 +86,92 @@ $(document).ready(function(){
         $('.orderTotal').append(order.total);
     });
 
+    // ADD ANOTHER PIZZA
+    $('.addPizza').click(function(){
+        $('.orderForm').append('<div class="row orderSpace">'+
+                                        '<div class="col-md-4">'+
+                                            '<label for="type">Type of Pizza</label>'+
+                                        '</div>'+
+                                        '<div class="col-md-4">'+
+                                            '<form action="">'+
+                                                '<select name="pizza" class="pizzaType" style="width: 300px;">'+
+                                                    '<option  value="Chicken Mushroom">Chicken Mushroom Pizza - Ksh.1300</option>'+
+                                                    '<option value="Hawaiian">Hawaiian Pizza - Ksh.1250</option>'+
+                                                    '<option value="Chicken Tikka">Chicken Tikka Pizza - Ksh.1100</option>'+
+                                                    '<option value="Vegeterian Tikka">Vegeterian Tikka Pizza - Ksh.1150</option>'+
+                                                    '<option value="Pepperoni">Beef Pepperoni Pizza - Ksh.1300</option>'+
+                                                    '<option value="Italian">Italian Pizza - Ksh.1400</option>'+
+                                                '</select>'+
+                                            '</form>'+
+                                        '</div>'+
+                                        '<div class="col-md-4 ">'+
+                                        '<p class="pName border border-danger rounded-lg"></p>'+
+                                        '</div>'+
+                                    '</div>'+
+                                    '<div class="row orderSpace">'+
+                                        '<div class="col-md-4">'+
+                                            '<label for="type">Size of Pizza</label>'+
+                                        '</div>'+
+                                        '<div class="col-md-4">'+
+                                            '<form action="">'+
+                                                '<select name="size" class="pizzaSize" style="width: 300px;">'+
+                                                    '<option value=1300 class="large">Large</option>'+
+                                                    '<option value=800 class="medium">Medium</option>'+
+                                                    '<option value=550 class="small">Small</option>'+
+                                                '</select>'+
+                                            '</form>'+
+                                        '</div>'+
+                                        '<div class="col-md-4">'+
+                                        '<p class="pSize border border-danger rounded-lg"></p>'+ 
+                                        '</div>'+
+                                    '</div>'+
+                                    '<div class="row orderSpace">'+
+                                        '<div class="col-md-4">'+
+                                            '<label for="type">Type of Toppings</label>'+
+                                        '</div>'+
+                                        '<div class="col-md-4">'+
+                                            '<form action="">'+
+                                                '<select name="toppings" class="pizzaToppings" style="width: 300px;">'+
+                                                    '<option value="100" class="mushroom">Mushroom</option>'+
+                                                    '<option value="100" class="bacon">Bacon</option>'+
+                                                    '<option value="100" class="bacon">Sausage</option>'+
+                                                    '<option value="100" class="chese">Cheese</option>'+
+                                                '</select>'+
+                                            '</form>'+
+                                        '</div>'+
+                                        '<div class="col-md-4">'+
+                                            '<p class="pToppings border border-danger rounded-lg"></p>'+
+                                        '</div>'+
+                                    '</div>'+
+                                    '<div class="row orderSpace">'+
+                                        '<div class="col-md-4">'+
+                                            '<label for="type">Type of Crust</label>'+
+                                        '</div>'+
+                                        '<div class="col-md-4">'+
+                                            '<form action="">'+
+                                                '<select name="crust" class="pizzaCrust" style="width: 300px;">'+
+                                                    '<option value=50 class="stuffed">Stuffed Crust</option>'+
+                                                    '<option value=100 class="thinCrispy">Thin Crispy Crust</option>'+
+                                                    '<option value=150 class="neopolitan">Neopolitan Crust</option>'+
+                                                    '<option value=100 class="gluteen">Gluteen Free Crust</option>'+
+                                                '</select>'+
+                                            '</form>'+
+                                        '</div>'+
+                                        '<div class="col-md-4">'+
+                                                    '<p class="pCrust border border-danger rounded-lg"></p>'+
+                                                '</div>'+
+                                        '</div>'
+                                        );
+        
+    });
+
     // Home delivery option
     var user;
     var number;
     var location;
+    var newAddress;
+    var order;
+    var deliveryTotal;
     $('.homeDelivery').click(function(){
         // User delivery infomation
         $('.contactForm').slideToggle(1000);
@@ -101,8 +191,21 @@ $(document).ready(function(){
             alert("Home Delivery Filed! Please fill the form.")
         }
         else{
+            // Add home delivery charges to the original amount after the confrmed is true
+            deliveryTotal=total+200;
+            $('.total').html(deliveryTotal);
             alert("Home Delivery Confirmed!");
         }
+        // Create a new address using ADDRESS constructor
+        newAddress=new Address(user,number,location);
+        
+        // Push the address to the Order constuctor on the address empty array property
+        order.address.push(newAddress);
+        console.log(order);
+    });
+    $("#submit").click(function(event){
+        event.preventDefault();
+        // alert(newAddress.user +','+'we have received your order of' +','+ order.pizzaType +'to'+ newAddress.location)
     });
 
 });
