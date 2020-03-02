@@ -206,8 +206,12 @@ $(document).ready(function(){
     
         $("#submit").click(function(event){
             event.preventDefault();
-            console.log(order);
-            alert(newAddress.userName +','+' '+'we have received your order of' +','+' '+ order.pizzaType +'and will be sent to'+' '+ newAddress.userLocation);
+            if(user && number && location){
+            alert(newAddress.userName +','+' '+'we have received your order of' +','+' '+ order.pizzaType +'and will be sent to'+' '+ newAddress.userLocation+'.'+' '+'Thank You!');
+            }
+            else if(!user && !number && !location){
+                alert( 'Your' +' '+order.pizzaType+' '+'has been recorded. Thank You!')
+            }
         });
     });
 
