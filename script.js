@@ -11,9 +11,9 @@ function Order(type,size,crust,toppings,total){
 }
 
 function Address(user,number,location){
-    this.user=user;
-    this.number=number;
-    this.location=location;
+    this.userName=user;
+    this.userNumber=number;
+    this.userLocation=location;
 }
 
 var pizza; var size; var toppings; var crust;
@@ -23,6 +23,7 @@ var small;
 var total=0;
 var totalOrder=0;
 var order;
+var newAddress;
 // add an order prototype.
 
 Order.prototype.addOrder=function(){
@@ -70,11 +71,11 @@ $(document).ready(function(){
         var orderNumber=0;
         orderNumber= +1;
         total= size+toppings+crust;
-
+        $('.total').html(total);
         // Use constructor to retrieve  pizza order
         // Use the constructor to append the order on a table
 
-        var order= new Order(pizza,size,toppings,crust,total);
+        order= new Order(pizza,size,toppings,crust,total);
 
 
         // Append the new order to the table order
@@ -169,7 +170,6 @@ $(document).ready(function(){
     var user;
     var number;
     var location;
-    var newAddress;
     var order;
     var deliveryTotal;
     $('.homeDelivery').click(function(){
@@ -188,7 +188,8 @@ $(document).ready(function(){
          location=$('.userLocation').val();
 
         if(!user && !number && !location){
-            alert("Home Delivery Filed! Please fill the form.")
+            $('.total').html(total);
+            alert("Home Delivery Filed! Please fill the form.");
         }
         else{
             // Add home delivery charges to the original amount after the confrmed is true
@@ -201,11 +202,13 @@ $(document).ready(function(){
         
         // Push the address to the Order constuctor on the address empty array property
         order.address.push(newAddress);
-        console.log(order);
-    });
-    $("#submit").click(function(event){
-        event.preventDefault();
-        // alert(newAddress.user +','+'we have received your order of' +','+ order.pizzaType +'to'+ newAddress.location)
+        // console.log(order);
+    
+        $("#submit").click(function(event){
+            event.preventDefault();
+            console.log(order);
+            alert(newAddress.userName +','+' '+'we have received your order of' +','+' '+ order.pizzaType +'and will be sent to'+' '+ newAddress.userLocation);
+        });
     });
 
 });
